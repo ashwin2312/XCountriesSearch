@@ -1,12 +1,12 @@
 import React from "react";
-import styles from "./CountryCard.module.css";
+import "./CountryCard.css";
 
 export default function CountryCard(countryName, countryImage) {
   //   console.log("name::", countryName);
-//   console.log("image::", countryImage);
+  //   console.log("image::", countryImage);
   return (
-    <div className={styles.countryCard}>
-      <div className={styles.imageContainer}>
+    <div className="countryCard">
+      <div className="imageContainer">
         <img
           src={countryName.countryImage}
           alt="country image"
