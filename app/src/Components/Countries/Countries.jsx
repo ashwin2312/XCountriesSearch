@@ -5,7 +5,7 @@ import styles from "./Countries.module.css";
 
 export default function Countries() {
   const [countryList, setCountryList] = useState([]);
-  const [filterName, setFilterName] = useState("");
+  const [filterName, setFilterName] = useState();
 
   const API =
     "https://countries-search-data-prod-812920491762.asia-south1.run.app/countries";
@@ -25,8 +25,8 @@ export default function Countries() {
     getCountries();
   }, []);
 
-  const filteredCountries = countryList.filter(
-    (country) => country.common === filterName
+  const filteredCountries = countryList.filter((country) =>
+    country.common.includes(filterName)
   );
 
   //   console.log("countryList::", countryList);
