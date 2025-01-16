@@ -5,7 +5,8 @@ import styles from "./Countries.module.css";
 
 export default function Countries() {
   const [countryList, setCountryList] = useState([]);
-  const [filterName, setFilterName] = useState();
+  const [filterName, setFilterName] = useState("");
+  const [searchName, setSearchName] = useState("");
 
   const API =
     "https://countries-search-data-prod-812920491762.asia-south1.run.app/countries";
@@ -33,7 +34,12 @@ export default function Countries() {
 
   return (
     <div className={styles.container}>
-      <SearchComponent filterName={filterName} setFilterName={setFilterName} />
+      <SearchComponent
+        filterName={filterName}
+        setFilterName={setFilterName}
+        searchName={searchName}
+        setSearchName={setSearchName}
+      />
       {!filterName ? (
         <div className={styles.countryListContainer}>
           {countryList.map((country) => {
