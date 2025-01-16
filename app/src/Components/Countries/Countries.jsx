@@ -29,7 +29,7 @@ export default function Countries() {
     country.common.includes(filterName)
   );
 
-  //   console.log("countryList::", countryList);
+  // console.log("filteredCountries::", filteredCountries);
 
   return (
     <div className={styles.container}>
@@ -58,7 +58,6 @@ export default function Countries() {
               />
             );
           })}
-          <CountryCard />
         </div>
       )}
     </div>
